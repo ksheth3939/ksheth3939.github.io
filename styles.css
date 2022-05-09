@@ -1,5 +1,11 @@
+:root {
+  --highlight: rgb(72, 72, 157);
+}
+
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -7,7 +13,11 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+
 
 
 #main-container {
@@ -21,13 +31,22 @@ body {
 #navbar {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 0 10% 0 10%;
+  align-items: center;
+  padding: 20px 10% 20px 10%;
+  background-color: var(--highlight);
 }
 
 .navbar-ele {
-  color: black
+  color: rgb(232, 232, 232);
+  margin-right: 40px;
+  text-decoration: none;
+}
 
+.navbar-ele-active {
+  color: white;
+  font-weight: bold;
+  margin-right: 40px;
+  text-decoration: none;
 }
 
 #content {
@@ -35,6 +54,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 10% 0 10%;
+  flex-grow: 1;
 }
 
 /* Work Experience Related Stuff */
@@ -43,7 +64,7 @@ body {
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .xp-logo-container {
@@ -58,12 +79,17 @@ body {
 
 .xp-company {
   font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: var(--highlight);
 }
 
 .xp-position {
   font-weight: bold;
   font-style: italic;
   text-decoration: underline;
+  margin-bottom: 0;
+
 }
 
 .xp-desc {
@@ -76,12 +102,22 @@ body {
 
 .interest-row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 1000px;
 }
 
 .interest-img {
-  /* width: 250px;
-  height: 250px; */
+  height: 200px;
   margin: 10px 10px 10px 10px;
+}
+
+.interest-img:hover {
+  opacity: 0.5;
+  transition: 100ms;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
 }
